@@ -5,19 +5,21 @@ class Bicycle(object):
         self.model = model
         self.weight = weight
         self.cost = cost
-        
-class Shop(object):
-    inventory = {
-        "speed": 100,
+
+speed = Bycicle("speed", 10, 100)
+
         "trial": 200,
         "race": 300,
         "road": 400,
         "mountain": 500,
         "electric": 820
-    }
+            
+class Shop(object):
+    inventory = {}
     profit = 0
-    def __init__(self, name):
+    def __init__(self, name, inventory):
         self.name = name
+        self.inventory = inventory
     
 class Customer(object):
     def __init__(self, name, wallet, bike):
